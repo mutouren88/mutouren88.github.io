@@ -1,209 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="hexo安装安装时的问题npm install -g hexo-cli 使用这个命令安装后出错，权限问题，后来使用sudo 后正常 创建目录，～&#x2F;Blog，后面在这里面 $ hexo new “My New Post” 本地已经安装完成，能通过浏览器打开">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/2020/09/01/hexo%E5%AE%89%E8%A3%85/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="hexo安装安装时的问题npm install -g hexo-cli 使用这个命令安装后出错，权限问题，后来使用sudo 后正常 创建目录，～&#x2F;Blog，后面在这里面 $ hexo new “My New Post” 本地已经安装完成，能通过浏览器打开">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-01T15:01:22.769Z">
-<meta property="article:modified_time" content="2020-09-01T15:01:22.773Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
+  <head>
+    <meta charset="utf-8" />
+    <meta name="baidu-site-verification" content="vvVgSQUzPU" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="keywords" content="虎虎|博客|个人|utone|Utone|">
+    <meta name="description" content="骑士恨煎蛋，骑士恨孜然">
+    
+    <title>
+       Hexo
+    </title>
+    
 <link rel="stylesheet" href="/css/style.css">
-
-<meta name="generator" content="Hexo 5.1.1"></head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+ 
+    
+      <link rel="icon" href="/images/favicon.ico" />
+    
+  <meta name="generator" content="Hexo 5.1.1"></head>
+  <body>
+    <div id="container">
+      <div id="main-left">
+        <div id="introduce">
+          <div class="logo-worp">
+            <a href="/"><img class="logo" src="/images/logo.png" alt=""/></a>
+          </div>
+          <ul>
+            
+              <li><a href="/"> Home </a></li>
+            
+              <li><a href="/archives"> Archive </a></li>
+            
+              <li><a href="/about"> About </a></li>
+            
+              <li><a href="/atom.xml"> RSS </a></li>
+            
+            <li>
+              <img id="search-img" src="/images/search.svg" alt="search" />
+            </li>
+          </ul>
+           
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#hexo%E5%AE%89%E8%A3%85"><span class="post-toc-number">1.</span> <span class="post-toc-text">hexo安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E9%97%AE%E9%A2%98"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">安装时的问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E5%AE%89%E8%A3%85hexo-deployer-git-%E6%8A%A5%E9%94%99"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">安装hexo-deployer-git 报错</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E8%BF%9E%E6%8E%A5%E5%88%B0github"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">连接到github</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Quick-setup-%E2%80%94-if-you%E2%80%99ve-done-this-kind-of-thing-before"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">Quick setup — if you’ve done this kind of thing before</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E2%80%A6or-create-a-new-repository-on-the-command-line"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">…or create a new repository on the command line</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E2%80%A6or-push-an-existing-repository-from-the-command-line"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">…or push an existing repository from the command line</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#%E2%80%A6or-import-code-from-another-repository"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">…or import code from another repository</span></a></li></ol></li></ol></li></ol> 
+          
+        </div>
       </div>
+      <div id="main-right"><div id="post">
+    
+    <div class="post-meta">
+        <time class="post-data" datetime="2020-09-01T15:01:22.769Z" itemprop="datePublished">
+            2020-09-01
+        </time>
+        
+        
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-hexo安装" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/09/01/hexo%E5%AE%89%E8%A3%85/" class="article-date">
-  <time datetime="2020-09-01T15:01:22.769Z" itemprop="datePublished">2020-09-01</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+    <div class="post-entry">
         <h1 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h1><h2 id="安装时的问题"><a href="#安装时的问题" class="headerlink" title="安装时的问题"></a>安装时的问题</h2><p>npm install -g hexo-cli</p>
 <p>使用这个命令安装后出错，权限问题，后来使用sudo 后正常</p>
 <p>创建目录，～/Blog，后面在这里面</p>
 <p>$ hexo new “My New Post”</p>
 <p>本地已经安装完成，能通过浏览器打开</p>
+<h4 id="安装hexo-deployer-git-报错"><a href="#安装hexo-deployer-git-报错" class="headerlink" title="安装hexo-deployer-git 报错"></a>安装hexo-deployer-git 报错</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@2.1.3 (node_modules&#x2F;fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@2.1.3: wanted &#123;&quot;os&quot;:&quot;darwin&quot;,&quot;arch&quot;:&quot;any&quot;&#125; (current: &#123;&quot;os&quot;:&quot;linux&quot;,&quot;arch&quot;:&quot;x64&quot;&#125;)</span><br><span class="line"></span><br><span class="line">+ hexo-deployer-git@2.1.0</span><br><span class="line">added 29 packages from 336 contributors and audited 218 packages in 13.762s</span><br><span class="line"></span><br><span class="line">8 packages are looking for funding</span><br><span class="line">  run &#96;npm fund&#96; for details</span><br><span class="line"></span><br><span class="line">found 1 low severity vulnerability</span><br><span class="line">  run &#96;npm audit fix&#96; to fix them, or &#96;npm audit&#96; for details</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-      
+<p>没管他，继续使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;mutouren88&#x2F;mtr.github.io.git</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from public folder...</span><br><span class="line">INFO  Copying files from extend dirs...</span><br><span class="line"></span><br><span class="line">*** 请告诉我你是谁。</span><br><span class="line"></span><br><span class="line">运行</span><br><span class="line"></span><br><span class="line">  git config --global user.email &quot;you@example.com&quot;</span><br><span class="line">  git config --global user.name &quot;Your Name&quot;</span><br><span class="line"></span><br><span class="line">来设置您账号的缺省身份标识。</span><br><span class="line">如果仅在本仓库设置身份标识，则省略 --global 参数。</span><br><span class="line">fatal: 不允许空的姓名（对于 &lt;jack@mx&gt;）</span><br><span class="line">error: src refspec HEAD does not match any.</span><br><span class="line">error: 推送一些引用到 &#39;https:&#x2F;&#x2F;github.com&#x2F;mutouren88&#x2F;mtr.github.io.git&#39; 失败</span><br><span class="line">FATAL &#123;</span><br><span class="line">  err: Error: Spawn failed</span><br><span class="line">      at ChildProcess.&lt;anonymous&gt; (&#x2F;home&#x2F;jack&#x2F;Blog&#x2F;mutourenBlog&#x2F;node_modules&#x2F;hexo-deployer-git&#x2F;node_modules&#x2F;hexo-util&#x2F;lib&#x2F;spawn.js:51:21)</span><br><span class="line">      at ChildProcess.emit (events.js:310:20)</span><br><span class="line">      at Process.ChildProcess._handle.onexit (internal&#x2F;child_process.js:275:12) &#123;</span><br><span class="line">    code: 1</span><br><span class="line">  &#125;</span><br><span class="line">&#125; Something&#39;s wrong. Maybe you can find the solution here: %s https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;troubleshooting.html</span><br></pre></td></tr></table></figure>
+
+<p>布shu出错了，</p>
+<h2 id="连接到github"><a href="#连接到github" class="headerlink" title="连接到github"></a>连接到github</h2><h3 id="Quick-setup-—-if-you’ve-done-this-kind-of-thing-before"><a href="#Quick-setup-—-if-you’ve-done-this-kind-of-thing-before" class="headerlink" title="Quick setup — if you’ve done this kind of thing before"></a><strong>Quick setup</strong> — if you’ve done this kind of thing before</h3><p><strong>or</strong></p>
+<p>HTTPSSSH</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io.git">https://github.com/mutouren88/mtr.github.io.git</a></p>
+<p>SSH </p>
+<p><a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#109;</a>:mutouren88/mtr.github.io.git</p>
+<p>Get started by <a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io/new/master">creating a new file</a> or <a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io/upload">uploading an existing file</a>. We recommend every repository include a <a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io/new/master?readme=1">README</a>, <a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io/new/master?filename=LICENSE.md">LICENSE</a>, and <a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io/new/master?filename=.gitignore">.gitignore</a>.</p>
+<h3 id="…or-create-a-new-repository-on-the-command-line"><a href="#…or-create-a-new-repository-on-the-command-line" class="headerlink" title="…or create a new repository on the command line"></a>…or create a new repository on the command line</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# mtr.github.io&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M master</span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;mutouren88&#x2F;mtr.github.io.git</span><br><span class="line">git push -u origin master</span><br><span class="line">                </span><br></pre></td></tr></table></figure>
+
+<h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;mutouren88&#x2F;mtr.github.io.git</span><br><span class="line">git branch -M master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<h3 id="…or-import-code-from-another-repository"><a href="#…or-import-code-from-another-repository" class="headerlink" title="…or import code from another repository"></a>…or import code from another repository</h3><p>You can initialize this repository with code from a Subversion, Mercurial, or TFS project.</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/mutouren88/mtr.github.io/import">Import code</a></p>
+
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/01/hexo%E5%AE%89%E8%A3%85/" data-id="ckekee8fj0000aw7fdt5ndacz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
+    <!--畅言PC和WAP自适应版-->
   
-    
-<nav id="article-nav">
-  
-    <a href="/2020/09/01/%E4%BD%A0%E5%A5%BD/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/09/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
-
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li></ul>
+</div></div>
     </div>
-  </div>
-
-
-  
+    <div id="footer">骑士恨煎蛋，骑士恨孜然</div>
+    <img id="top" src="/images/up-circle.svg" alt="top" />
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/09/02/%E7%9A%84%E6%88%91%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">的我第一篇文章</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/01/%E4%BD%A0%E5%A5%BD/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/01/hexo%E5%AE%89%E8%A3%85/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/09/01/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
+  </body>
 </html>
+<!-- 加载主题脚本文件 -->
+
+<script src="/scripts/utone.js"></script>
+
+
+<script type="text/javascript">
+  window.onload = function() {
+    scroll.init()
+    siteSearch.init()
+  }
+</script>
